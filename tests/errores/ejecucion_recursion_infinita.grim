@@ -1,0 +1,2 @@
+pocion infinito = hechizo(n) { conjura infinito(n + 1); };
+infinito(0);

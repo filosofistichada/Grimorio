@@ -1,0 +1,8 @@
+pocion llamados = 0;
+pocion marcar = hechizo(v) { llamados = llamados + 1; conjura v; };
+revelar(sombra && marcar(luz));
+revelar(luz || marcar(luz));
+revelar(luz && marcar(sombra));
+revelar(sombra || marcar(luz));
+revelar("llamados:", llamados);
+revelar(vacio || "respaldo" == "respaldo");

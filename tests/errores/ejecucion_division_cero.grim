@@ -1,0 +1,3 @@
+revelar("antes del error");
+pocion x = 10 / 0;
+revelar("después del error");

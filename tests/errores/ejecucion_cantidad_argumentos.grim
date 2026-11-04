@@ -1,0 +1,2 @@
+pocion suma = hechizo(a, b) { conjura a + b; };
+revelar(suma(1));

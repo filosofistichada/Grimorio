@@ -1,0 +1,4 @@
+// Un comentario de línea completa
+pocion t = "linea1\nlinea2\t\"citada\"";   // comentario al final
+revelar(t);
+revelar(medir("hola"), "hola"[1], "b" > "a");

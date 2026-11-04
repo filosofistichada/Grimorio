@@ -1,0 +1,32 @@
+// Extensiones: closures, evaluación en cortocircuito y hechizos de orden superior.
+
+// Closure: el hechizo interno recuerda "cuenta" aunque crearContador ya terminó.
+pocion crearContador = hechizo() {
+    pocion cuenta = 0;
+    conjura hechizo() {
+        cuenta = cuenta + 1;
+        conjura cuenta;
+    };
+};
+pocion contar = crearContador();
+contar();
+contar();
+revelar("El contador va en", contar());
+
+pocion multiplicador = hechizo(factor) { conjura hechizo(x) { conjura x * factor; }; };
+pocion triple = multiplicador(3);
+revelar("triple(7) =", triple(7));
+
+// Cortocircuito: el lado derecho no se evalúa si el izquierdo ya decide.
+pocion explotar = hechizo() { revelar("¡esto no debería imprimirse!"); conjura luz; };
+revelar(sombra && explotar());
+revelar(luz || explotar());
+pocion lista = [];
+revelar("Seguro:", medir(lista) > 0 && lista[0] == 1);   // no se sale del rango
+
+// Orden superior: hechizos que reciben hechizos.
+pocion numeros = [1, 2, 3, 4, 5, 6];
+revelar("Cuadrados:", encantar(numeros, hechizo(n) { conjura n * n; }));
+revelar("Pares:", tamizar(numeros, hechizo(n) { conjura n % 2 == 0; }));
+pocion aplicarDosVeces = hechizo(h, x) { conjura h(h(x)); };
+revelar("triple(triple(2)) =", aplicarDosVeces(triple, 2));

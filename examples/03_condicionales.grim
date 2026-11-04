@@ -1,0 +1,23 @@
+// siProfecia / otraProfecia / maldicion, incluidos condicionales anidados.
+pocion clasificar = hechizo(n) {
+    siProfecia (n < 0) {
+        conjura "negativo";
+    } otraProfecia (n == 0) {
+        conjura "cero";
+    } maldicion {
+        siProfecia (n % 2 == 0) {      // condicional anidado
+            conjura "positivo par";
+        } maldicion {
+            conjura "positivo impar";
+        }
+    }
+};
+
+revelar(clasificar(-5));
+revelar(clasificar(0));
+revelar(clasificar(8));
+revelar(clasificar(7));
+
+// siProfecia también es una expresión: produce el valor del bloque elegido.
+pocion luna = siProfecia (luz) { "llena" } maldicion { "nueva" };
+revelar("La luna está", luna);

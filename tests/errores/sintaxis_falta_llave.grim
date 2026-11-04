@@ -1,0 +1,2 @@
+pocion f = hechizo(a) {
+    conjura a;

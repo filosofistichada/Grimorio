@@ -1,0 +1,9 @@
+// Hechizos integrados: imprimir, longitud y conversión de tipos.
+revelar("revelar imprime", 1, 2.5, luz, vacio, [1, "dos"]);
+revelar(medir("abracadabra"), medir([1, 2, 3]), medir({"a": 1}));
+
+pocion texto = transmutar(42);
+revelar(texto + " es ahora un", esencia(texto));
+revelar(cristalizar("7") + 3, cristalizar(9.99), cristalizar(luz));
+revelar(destilar(3) / 2, destilar("2.5") * 2);
+revelar(esencia(1), esencia(1.0), esencia("1"), esencia([1]), esencia({}), esencia(revelar));

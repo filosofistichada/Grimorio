@@ -1,0 +1,13 @@
+pocion buscar = hechizo(lista, objetivo) {
+    circulo (pocion i = 0; i < medir(lista); i = i + 1) {
+        siProfecia (lista[i] == objetivo) { conjura i; }
+    }
+    conjura -1;
+};
+revelar(buscar([4, 8, 15, 16], 15), buscar([1], 9));
+pocion n = 0;
+circulo (;;) {
+    n = n + 1;
+    siProfecia (n == 3) { conjura; }
+}
+revelar("no se llega aquí");

@@ -1,0 +1,2 @@
+pocion edad = 900;
+revelar("edad: " + edad);

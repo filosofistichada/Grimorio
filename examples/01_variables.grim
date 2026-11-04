@@ -1,0 +1,13 @@
+// Variables: declarar con pocion, reasignar con =, consultar por su nombre.
+pocion nombre = "Merlin";
+pocion edad = 900;
+pocion altura = 1.82;
+pocion esSabio = luz;
+pocion mascota = vacio;
+
+revelar("Nombre:", nombre);
+revelar("Edad:", edad, "- altura:", altura);
+revelar("Sabio:", esSabio, "- mascota:", mascota);
+
+edad = edad + 1;               // reasignación
+revelar("Cumplió años:", edad);

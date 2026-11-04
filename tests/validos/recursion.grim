@@ -1,0 +1,13 @@
+pocion potencia = hechizo(base, exp) {
+    siProfecia (exp == 0) { conjura 1; }
+    conjura base * potencia(base, exp - 1);
+};
+revelar(potencia(2, 10));
+pocion esPar = hechizo(n) { siProfecia (n == 0) { conjura luz; } conjura esImpar(n - 1); };
+pocion esImpar = hechizo(n) { siProfecia (n == 0) { conjura sombra; } conjura esPar(n - 1); };
+revelar(esPar(10), esImpar(7));
+pocion sumarLista = hechizo(l, i) {
+    siProfecia (i == medir(l)) { conjura 0; }
+    conjura l[i] + sumarLista(l, i + 1);
+};
+revelar(sumarLista([5, 10, 15], 0));

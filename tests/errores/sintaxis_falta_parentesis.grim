@@ -1,0 +1,4 @@
+pocion x = 2;
+siProfecia (x > 1 {
+    revelar(x);
+}

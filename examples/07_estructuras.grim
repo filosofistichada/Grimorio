@@ -1,0 +1,18 @@
+// Estructuras de datos: listas y diccionarios.
+pocion ingredientes = ["ojo de tritón", "pluma de fénix", "raíz de mandrágora"];
+revelar("Primero:", ingredientes[0]);
+revelar("Cantidad:", medir(ingredientes));
+
+ingredientes[1] = "pluma de grifo";              // modificar por índice
+alCaldero(ingredientes, "polvo de estrellas");   // agregar al final
+revelar(ingredientes);
+
+pocion matriz = [[1, 2], [3, 4]];
+revelar("matriz[1][0] =", matriz[1][0]);
+revelar("Listas unidas:", [1, 2] + [3]);
+
+pocion libro = {"titulo": "Necronomicón", "paginas": 666, "prohibido": luz};
+revelar(libro["titulo"], "tiene", libro["paginas"], "páginas");
+libro["autor"] = "Abdul Alhazred";               // agregar una clave
+revelar("Claves:", claves(libro));
+revelar("Clave inexistente:", libro["precio"]);  // vacio

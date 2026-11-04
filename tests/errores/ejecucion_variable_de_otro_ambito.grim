@@ -1,0 +1,2 @@
+siProfecia (luz) { pocion secreto = 42; }
+revelar(secreto);

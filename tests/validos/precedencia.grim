@@ -1,0 +1,8 @@
+revelar(2 + 3 * 4 - 1);
+revelar((2 + 3) * (4 - 1));
+revelar(100 / 10 / 2);
+revelar(2 ** 2 ** 3);
+revelar(-3 + 5);
+revelar(!sombra == luz);
+revelar(1 + 1 == 2 && 3 > 2 || sombra);
+revelar(5 > 3 == luz);

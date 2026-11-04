@@ -1,0 +1,14 @@
+// Expresiones aritméticas, relacionales y lógicas con precedencia y asociatividad.
+revelar(1 + 2 * 3);            // 7: * antes que +
+revelar((1 + 2) * 3);          // 9: los paréntesis mandan
+revelar(10 - 4 - 3);           // 3: la resta asocia a la izquierda (10-4)-3
+revelar(2 ** 3 ** 2);          // 512: ** asocia a la derecha 2**(3**2)
+revelar(-2 ** 2);              // -4: ** va antes que el - unario
+revelar(7 / 2, 7 % 2);         // 3 1: división entera entre enteros
+revelar(7 / 2.0);              // 3.5: si hay un decimal, el resultado es decimal
+revelar(0.1 + 0.2 == 0.3);     // sombra: los decimales son de punto flotante
+
+revelar(3 < 5, 3 >= 5, 2 == 2.0, "a" != "b");
+revelar(luz && sombra, luz || sombra, !luz);
+revelar(1 < 2 && 2 < 3 || sombra);   // && va antes que ||
+revelar("Abra" + "cadabra");

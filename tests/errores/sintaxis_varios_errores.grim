@@ -1,0 +1,3 @@
+pocion a = ;
+pocion b = (1 + 2;
+revelar("esto no se ejecuta");

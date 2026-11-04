@@ -1,0 +1,26 @@
+// Ámbitos: variables globales y locales con el mismo nombre.
+pocion x = "global";
+
+pocion mostrar = hechizo() {
+    pocion x = "local del hechizo";    // otra x, solo existe dentro del hechizo
+    revelar("Dentro del hechizo:", x);
+};
+mostrar();
+revelar("Fuera del hechizo:", x);
+
+siProfecia (luz) {
+    pocion x = "local del bloque";     // los bloques también abren ámbito
+    revelar("Dentro del bloque:", x);
+}
+revelar("Fuera del bloque:", x);
+
+// Sin pocion, = modifica la variable del ámbito exterior.
+pocion contador = 0;
+pocion incrementar = hechizo() { contador = contador + 1; };
+incrementar();
+incrementar();
+revelar("Contador global:", contador);
+
+// Los parámetros también son locales.
+pocion doble = hechizo(x) { conjura x * 2; };
+revelar("doble(21) =", doble(21), "- x sigue siendo:", x);

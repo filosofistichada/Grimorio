@@ -1,0 +1,21 @@
+// Ciclos: amarre (while) y circulo (for).
+pocion i = 3;
+amarre (i > 0) {
+    revelar("Cuenta regresiva:", i);
+    i = i - 1;
+}
+
+pocion suma = 0;
+circulo (pocion j = 1; j <= 10; j = j + 1) {
+    suma = suma + j;
+}
+revelar("Suma de 1 a 10:", suma);
+
+// Tabla de multiplicar con ciclos anidados.
+circulo (pocion fila = 1; fila <= 3; fila = fila + 1) {
+    pocion linea = "";
+    circulo (pocion col = 1; col <= 3; col = col + 1) {
+        linea = linea + transmutar(fila * col) + " ";
+    }
+    revelar(linea);
+}

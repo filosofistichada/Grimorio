@@ -1,0 +1,4 @@
+revelar(1.5 + 1, 10 / 4, 10 / 4.0, 2 ** -1);
+revelar(cristalizar(3.7), cristalizar("-12"), destilar(1));
+revelar(transmutar(3.0) + "!", transmutar([1, "a"]));
+revelar(9223372036854775807);

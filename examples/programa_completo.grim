@@ -1,0 +1,29 @@
+// Programa completo: inventario de una tienda de pociones.
+pocion inventario = [
+    {"nombre": "Poción de invisibilidad", "precio": 120.5, "unidades": 3},
+    {"nombre": "Elixir de la vida", "precio": 999.99, "unidades": 1},
+    {"nombre": "Tónico de fuerza", "precio": 45.0, "unidades": 12}
+];
+
+pocion valorTotal = hechizo(items) {
+    pocion total = 0.0;
+    circulo (pocion i = 0; i < medir(items); i = i + 1) {
+        total = total + items[i]["precio"] * items[i]["unidades"];
+    }
+    conjura total;
+};
+
+pocion baratas = tamizar(inventario, hechizo(p) { conjura p["precio"] < 200; });
+pocion nombres = encantar(baratas, hechizo(p) { conjura p["nombre"]; });
+
+revelar("Valor del inventario:", valorTotal(inventario));
+revelar("Pociones baratas:", nombres);
+
+circulo (pocion i = 0; i < medir(inventario); i = i + 1) {
+    pocion p = inventario[i];
+    siProfecia (p["unidades"] == 1) {
+        revelar("¡Última unidad de", p["nombre"] + "!");
+    } otraProfecia (p["unidades"] < 5) {
+        revelar("Quedan pocas de", p["nombre"]);
+    }
+}

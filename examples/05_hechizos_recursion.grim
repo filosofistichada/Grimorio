@@ -1,0 +1,32 @@
+// Hechizos: definición, parámetros, valor de retorno y recursión.
+pocion saludar = hechizo(nombre, titulo) {
+    conjura "Saludos, " + titulo + " " + nombre;
+};
+revelar(saludar("Morgana", "hechicera"));
+
+pocion factorial = hechizo(n) {
+    siProfecia (n <= 1) { conjura 1; }
+    conjura n * factorial(n - 1);
+};
+revelar("10! =", factorial(10));
+
+pocion fibonacci = hechizo(n) {
+    siProfecia (n <= 1) { conjura n; }
+    conjura fibonacci(n - 1) + fibonacci(n - 2);
+};
+revelar("fibonacci(15) =", fibonacci(15));
+
+pocion ackermann = hechizo(m, n) {
+    siProfecia (m == 0) { conjura n + 1; }
+    siProfecia (n == 0) { conjura ackermann(m - 1, 1); }
+    conjura ackermann(m - 1, ackermann(m, n - 1));
+};
+revelar("ackermann(2, 2) =", ackermann(2, 2));
+
+pocion hanoi = hechizo(n, origen, destino, auxiliar) {
+    siProfecia (n == 0) { conjura []; }
+    conjura hanoi(n - 1, origen, auxiliar, destino)
+        + [[origen, destino]]
+        + hanoi(n - 1, auxiliar, destino, origen);
+};
+revelar("hanoi(3):", hanoi(3, "A", "C", "B"));

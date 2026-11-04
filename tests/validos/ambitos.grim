@@ -1,0 +1,17 @@
+pocion a = 1;
+pocion f = hechizo(a) {
+    pocion b = a + 10;
+    siProfecia (luz) {
+        pocion a = 100;
+        revelar("bloque", a, b);
+    }
+    revelar("hechizo", a, b);
+    conjura a;
+};
+revelar("resultado", f(5));
+revelar("global", a);
+circulo (pocion i = 0; i < 2; i = i + 1) {
+    pocion a = i * 2;
+    revelar("ciclo", a);
+}
+revelar("global otra vez", a);
